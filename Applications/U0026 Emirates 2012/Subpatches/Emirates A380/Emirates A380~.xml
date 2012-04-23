@@ -1,0 +1,677 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="S:\Company&apos;s Files\Red Group\Emirates\2012\Software\Touch Base - 16x9 - EM\Applications\U0026 Emirates 2012\Subpatches\Emirates A380\Emirates A380.v4p" filename="D:\Company&apos;s files\Arcstream AV\Red Group\Emirates\Patches\PQ Labs - 16 x 9 - vvvv 25\FX\PQ0006_Emirate\Subpatches\In the Air\In the Air.v4p" systemname="In the Air">
+   <BOUNDS height="12900" left="-825" top="150" type="Window" width="15840">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="11" nodename="IOBox (Value Advanced)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="765" top="15" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="765" top="15" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="State">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="10" nodename="EQ (String)" systemname="EQ (String)">
+   <BOUNDS height="100" left="780" top="975" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input 1" srcnodeid="11" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="1815" top="15" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1815" top="15" type="Box" width="1245">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Emirates_A380">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Name">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input 2" srcnodeid="9" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="Hidden" id="8" nodename="OR (Boolean Spectral)" systemname="OR (Boolean)">
+   <BOUNDS height="100" left="765" top="1950" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Input 1" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="3750" top="1005" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="3750" top="1005" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Input 2" srcnodeid="7" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="8805" top="660" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="8805" top="660" type="Box" width="705">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Endless">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="6675" top="660" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="6675" top="660" type="Box" width="705">
+   </BOUNDS>
+   <BOUNDS height="160" left="1755" top="3000" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="XYid">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="3" nodename="Delay (Animation)" systemname="Delay (Animation)">
+   <BOUNDS height="100" left="750" top="2625" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Time" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="8" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="13" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="3360" top="17535" type="Node" width="4605">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="30" nodename="Select (Value)" systemname="Select (Value)">
+   <BOUNDS height="100" left="6495" top="3855" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="30" dstpinname="Select" linkstyle="Bezier" srcnodeid="3" srcpinname="Output">
+   <LINKPOINT x="810" y="3360">
+   </LINKPOINT>
+   <LINKPOINT x="7035" y="3360">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="30" dstpinname="Input" linkstyle="Bezier" srcnodeid="4" srcpinname="Y Output Value">
+   <LINKPOINT x="7335" y="2378">
+   </LINKPOINT>
+   <LINKPOINT x="6525" y="2378">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" filename="A380 First.v4p" id="37" nodename="A380 First.v4p" systemname="A380 First">
+   <BOUNDS height="100" left="7305" top="11385" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="7305" top="11385" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="12900" left="4485" top="675" type="Window" width="16155">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="State" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Name" slicecount="1" values="First">
+   </PIN>
+   <PIN pinname="Input Top Menu" visible="1">
+   </PIN>
+   <PIN pinname="Layer Setup" visible="1">
+   </PIN>
+   <PIN pinname="Transform In " slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYid" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Video Selected" visible="1">
+   </PIN>
+   <PIN pinname="Alpha - Open Close" visible="1">
+   </PIN>
+   <PIN pinname="Menu Colour" visible="1">
+   </PIN>
+   <PIN pinname="Transform In - video" visible="1">
+   </PIN>
+   <PIN pinname="Tab hit colour">
+   </PIN>
+   <PIN pinname="Tab Colour">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="38" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="7290" top="13170" type="Node" width="11130">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="39" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="11820" top="3900" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="11820" top="3900" type="Box" width="1080">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Transform In |">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Layer 3" srcnodeid="38" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Transform In " srcnodeid="39" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="XYid" srcnodeid="30" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InAWindow" filename="A380 Business.v4p" id="47" nodename="A380 Business.v4p" systemname="A380 Business">
+   <BOUNDS height="100" left="9555" top="11355" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="State" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Name" slicecount="1" values="Business">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In " slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYid" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <BOUNDS height="12900" left="3780" top="480" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Layer Setup" visible="1">
+   </PIN>
+   <PIN pinname="Video Selected" visible="1">
+   </PIN>
+   <BOUNDS left="9555" top="11355" type="Box">
+   </BOUNDS>
+   <PIN pinname="Menu Colour" visible="1">
+   </PIN>
+   <PIN pinname="Transform In - video" visible="1">
+   </PIN>
+   <PIN pinname="Alpha - Open Close" visible="1">
+   </PIN>
+   <PIN pinname="Tab Colour" visible="1">
+   </PIN>
+   <PIN pinname="Tab hit colour" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="47" dstpinname="Transform In " srcnodeid="39" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="XYid" srcnodeid="30" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Layer 2" hiddenwhenlocked="1" srcnodeid="37" srcpinname="Layer Setup">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Layer 3" hiddenwhenlocked="1" srcnodeid="47" srcpinname="Layer Setup">
+   </LINK>
+   <LINK dstnodeid="38" dstpinname="Layer 1" srcnodeid="37" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="A380 Economy.v4p" id="48" nodename="A380 Economy.v4p" systemname="A380 Economy">
+   <BOUNDS height="100" left="12570" top="11385" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="12900" left="4065" top="750" type="Window" width="13470">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="State" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Name" slicecount="1" values="Economy">
+   </PIN>
+   <PIN pinname="Transform In " slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Layer Setup" visible="1">
+   </PIN>
+   <PIN pinname="XYid" visible="1">
+   </PIN>
+   <PIN pinname="Video Selected" visible="1">
+   </PIN>
+   <PIN pinname="Alpha - Open Close" visible="1">
+   </PIN>
+   <BOUNDS left="12570" top="11385" type="Box">
+   </BOUNDS>
+   <PIN pinname="Menu Colour" visible="1">
+   </PIN>
+   <PIN pinname="Transform In - video" visible="1">
+   </PIN>
+   <PIN pinname="Tab hit colour" visible="1">
+   </PIN>
+   <PIN pinname="Tab Colour" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Layer 4" hiddenwhenlocked="1" srcnodeid="48" srcpinname="Layer Setup">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="XYid" srcnodeid="30" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="A380 Crew.v4p" id="49" nodename="A380 Crew.v4p" systemname="A380 Crew">
+   <BOUNDS height="100" left="15585" top="11370" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="State" visible="1">
+   </PIN>
+   <PIN pinname="Transform In " slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="XYid" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Setup" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Name" slicecount="1" values="Crew">
+   </PIN>
+   <BOUNDS height="10920" left="6735" top="945" type="Window" width="12525">
+   </BOUNDS>
+   <PIN pinname="Video Selected" visible="1">
+   </PIN>
+   <BOUNDS left="15585" top="11370" type="Box">
+   </BOUNDS>
+   <PIN pinname="Alpha - Open Close" visible="1">
+   </PIN>
+   <PIN pinname="Menu Colour" visible="1">
+   </PIN>
+   <PIN pinname="Transform In - video" visible="1">
+   </PIN>
+   <PIN pinname="Tab Colour" visible="1">
+   </PIN>
+   <PIN pinname="Tab hit colour" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="49" dstpinname="Transform In " srcnodeid="39" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="XYid" srcnodeid="30" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Layer 5" hiddenwhenlocked="1" srcnodeid="49" srcpinname="Layer Setup">
+   </LINK>
+   <NODE componentmode="InABox" id="53" nodename="IOBox (Value Advanced)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="825" top="11625" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1440" left="825" top="11625" type="Box" width="3300">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="|The Emirates A380 promises customers &cr;&lf;in all classes the most luxurious travel &cr;&lf;experience available. Powered by four &cr;&lf;Engine Alliance GP7200 engines, the &cr;&lf;Emirates A380 offers both a quieter &cr;&lf;and more eco-friendly way to travel.|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="59" nodename="NOT (Boolean)" systemname="NOT (Boolean)">
+   <BOUNDS height="100" left="3960" top="9765" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="60" nodename="AND (Boolean)" systemname="AND (Boolean)">
+   <BOUNDS height="100" left="3225" top="10215" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="60" dstpinname="Input 2" srcnodeid="59" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="62" dstpinname="Input 1" srcnodeid="37" srcpinname="Video Selected">
+   </LINK>
+   <LINK dstnodeid="62" dstpinname="Input 2" srcnodeid="47" srcpinname="Video Selected">
+   </LINK>
+   <NODE componentmode="Hidden" filename="A380 Side Menu.v4p" id="34" nodename="A380 Side Menu.v4p" systemname="A380 Side Menu">
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="XYid" visible="1">
+   </PIN>
+   <PIN pinname="Transform In " slicecount="1" visible="1" values="||">
+   </PIN>
+   <BOUNDS height="100" left="4605" top="7005" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="4605" top="7005" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="11550" left="8775" top="1065" type="Window" width="11385">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Setup" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="State" visible="1">
+   </PIN>
+   <PIN pinname="Active" visible="1">
+   </PIN>
+   <PIN pinname="Alpha - Open Close" visible="1">
+   </PIN>
+   <PIN pinname="Menu colour">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="59" dstpinname="Input" srcnodeid="34" srcpinname="Active">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="State" srcnodeid="34" srcpinname="State">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="State" srcnodeid="34" srcpinname="State">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="State" srcnodeid="34" srcpinname="State">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="State" srcnodeid="34" srcpinname="State">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Layer 1" hiddenwhenlocked="1" srcnodeid="34" srcpinname="Layer Setup">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="Transform In " srcnodeid="39" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="XYid" srcnodeid="30" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="Enabled" linkstyle="Bezier" srcnodeid="3" srcpinname="Output">
+   <LINKPOINT x="810" y="4943">
+   </LINKPOINT>
+   <LINKPOINT x="4605" y="4943">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="64" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="3375" top="19065" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="3375" top="19065" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="64" dstpinname="Input Node" srcnodeid="13" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="65" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5700" top="735" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="5700" top="735" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Alpha - Open Close|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Layer 4" srcnodeid="34" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Alpha - Open Close" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="Alpha - Open Close" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="60" dstpinname="Input 1" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Enabled" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="38" dstpinname="Layer 2" srcnodeid="47" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="38" dstpinname="Layer 3" srcnodeid="48" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="Alpha - Open Close" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="38" dstpinname="Layer 4" srcnodeid="49" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="Alpha - Open Close" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="66" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="0" left="4500" top="3585" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="4500" top="3585" type="Box" width="2250">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Menu colour|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="34" dstpinname="Menu colour" srcnodeid="66" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Menu Colour" srcnodeid="66" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Menu Colour" srcnodeid="66" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="Menu Colour" srcnodeid="66" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="Menu Colour" srcnodeid="66" srcpinname="Color Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="67" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
+   <BOUNDS height="100" left="12810" top="4950" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.02">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Transform Video|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="67" dstpinname="Transform In" srcnodeid="39" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Transform In - video" srcnodeid="67" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Transform In - video" srcnodeid="67" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="Transform In - video" srcnodeid="67" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Alpha - Open Close" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="Transform In " srcnodeid="39" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="Transform In - video" srcnodeid="67" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\Intro copy landscape.v4p" id="69" nodename="..\Intro copy landscape.v4p" systemname="Intro copy landscape">
+   <BOUNDS height="100" left="900" top="13980" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Text" slicecount="1" visible="1" values="|The Emirates A380 promises customers &cr;&lf;in all classes the most luxurious travel &cr;&lf;experience available. Powered by four &cr;&lf;Engine Alliance GP7200 engines, the &cr;&lf;Emirates A380 offers both a quieter &cr;&lf;and more eco-friendly way to travel.|">
+   </PIN>
+   <PIN encoded="0" pinname="Filename" slicecount="1" values="|..\..\Media\Emirates Multitouch Wall Content\Emirates A380\A380 Hires - intro.png|">
+   </PIN>
+   <PIN pinname="Dsable text">
+   </PIN>
+   <PIN pinname="Enable text" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Layer 1" srcnodeid="69" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="69" dstpinname="Transform In" srcnodeid="39" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="69" dstpinname="Alpha" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="69" dstpinname="Enabled" srcnodeid="60" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="70" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="2805" top="13245" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="525" left="2805" top="13245" type="Box" width="510">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="69" dstpinname="Dsable text" srcnodeid="70" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="69" dstpinname="Enable text" srcnodeid="70" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="71" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="0" left="7245" top="9555" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="7245" top="9555" type="Box" width="2250">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|1.06020,0.96305,0.84647,1.00000|">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Tab hit colour|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="37" dstpinname="Tab hit colour" srcnodeid="71" srcpinname="Color Output">
+   </LINK>
+   <NODE componentmode="InABox" id="72" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="0" left="6675" top="8895" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="6675" top="8895" type="Box" width="2250">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|0.64947,0.54389,0.41719,1.00000|">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Tab Colour|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="37" dstpinname="Tab Colour" srcnodeid="72" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Tab Colour" srcnodeid="72" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Tab hit colour" srcnodeid="71" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="Tab hit colour" srcnodeid="71" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="Tab Colour" srcnodeid="72" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="Tab Colour" srcnodeid="72" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="Tab hit colour" srcnodeid="71" srcpinname="Color Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="73" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="100" left="7905" top="2040" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="74" nodename="LT (Value)" systemname="LT (Value)">
+   <BOUNDS height="100" left="7830" top="855" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="0.08">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="74" dstpinname="Input 1" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="75" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="7635" top="1575" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="75" dstpinname="Input" srcnodeid="74" srcpinname="Output">
+   <LINKPOINT x="7942" y="1417">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="73" dstpinname="Input 1" srcnodeid="75" srcpinname="Up Edge">
+   <LINKPOINT x="7732" y="2122">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="73" dstpinname="Input 2" srcnodeid="5" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="Reset" srcnodeid="73" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Reset" srcnodeid="73" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Reset" srcnodeid="73" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="48" dstpinname="Reset" srcnodeid="73" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="49" dstpinname="Reset" srcnodeid="73" srcpinname="Output">
+   </LINK>
+   </PATCH>

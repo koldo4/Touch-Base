@@ -1,0 +1,101 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="C:\Users\gaz\Documents\Company&apos;s Files\Red Group\Touch Base - T16x9v26\Applications\U0026 Emirates 2012\Subpatches\State.v4p" filename="S:\Company&apos;s Files\Red Group\Emirates\2012\Software\PQ Labs - 16 x 9 - vvvv 25 - smart edit\FX\Emirates\Subpatches\State.v4p" systemname="State">
+   <BOUNDS height="6000" left="10515" top="4575" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="1575" top="2505" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="270" left="1575" top="2505" type="Box" width="1650">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Current state|" encoded="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="6" nodename="Automata (Animation)" systemname="Automata (Animation)">
+   <BOUNDS height="100" left="1905" top="1845" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Quadrupels (from, event, to, action)" slicecount="1" values="|State_0 Destinations Destinations DoDestinations&cr;&lf;State_0 Emirates_A380 Emirates_A380 DoEmirates_A380&cr;&lf;State_0 In_the_Air In_the_Air DoIn_the_Air&cr;&lf;State_0 On_the_Ground On_the_Ground DoOn_the_Ground&cr;&lf;State_0 Skywards Skywards DoSkywards&cr;&lf;Destinations Reset State_0 DoReset &cr;&lf;Destinations Emirates_A380 Emirates_A380 DoEmirates_A380&cr;&lf;Destinations In_the_Air In_the_Air DoIn_the_Air&cr;&lf;Destinations On_the_Ground On_the_Ground DoOn_the_Ground&cr;&lf;Destinations Skywards Skywards DoSkywards&cr;&lf;Emirates_A380 Reset State_0 DoReset &cr;&lf;Emirates_A380 Destinations Destinations DoDestinations&cr;&lf;Emirates_A380 In_the_Air In_the_Air DoIn_the_Air&cr;&lf;Emirates_A380 On_the_Ground On_the_Ground DoOn_the_Ground&cr;&lf;Emirates_A380 Skywards Skywards DoSkywards&cr;&lf;In_the_Air Reset State_0 DoReset &cr;&lf;In_the_Air Destinations Destinations DoDestinations&cr;&lf;In_the_Air Emirates_A380 Emirates_A380 DoEmirates_A380&cr;&lf;In_the_Air On_the_Ground On_the_Ground DoOn_the_Ground&cr;&lf;In_the_Air Skywards Skywards DoSkywards&cr;&lf;On_the_Ground Reset State_0 DoReset &cr;&lf;On_the_Ground Destinations Destinations DoDestinations&cr;&lf;On_the_Ground Emirates_A380 Emirates_A380 DoEmirates_A380&cr;&lf;On_the_Ground In_the_Air In_the_Air DoIn_the_Air&cr;&lf;On_the_Ground Skywards Skywards DoSkywards&cr;&lf;Skywards Reset State_0 DoReset &cr;&lf;Skywards Destinations Destinations DoDestinations&cr;&lf;Skywards Emirates_A380 Emirates_A380 DoEmirates_A380&cr;&lf;Skywards In_the_Air In_the_Air DoIn_the_Air&cr;&lf;Skywards On_the_Ground On_the_Ground DoOn_the_Ground&cr;&lf;|" encoded="0">
+   </PIN>
+   <PIN pinname="Current state" visible="1">
+   </PIN>
+   <PIN pinname="Destinations" visible="1">
+   </PIN>
+   <PIN pinname="Emirates_A380" visible="1">
+   </PIN>
+   <PIN pinname="In_the_Air" visible="1">
+   </PIN>
+   <PIN pinname="On_the_Ground" visible="1">
+   </PIN>
+   <PIN pinname="Skywards" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Input String" srcnodeid="6" srcpinname="Current state">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\InterleaveNodes.dll" id="5" nodename="Vector (Spreads Split)" systemname="Vector (Spreads Split)">
+   <BOUNDS height="100" left="1965" top="1215" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output 3" visible="1">
+   </PIN>
+   <PIN pinname="Output 4" visible="1">
+   </PIN>
+   <PIN pinname="Output 5" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="On_the_Ground" srcnodeid="5" srcpinname="Output 1">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="In_the_Air" srcnodeid="5" srcpinname="Output 2">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Emirates_A380" srcnodeid="5" srcpinname="Output 3">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Destinations" srcnodeid="5" srcpinname="Output 4">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Skywards" srcnodeid="5" srcpinname="Output 5">
+   </LINK>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="1200" top="330" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1200" top="330" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Sub Menu hits|" encoded="0">
+   </PIN>
+   <PIN pinname="X Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Input" srcnodeid="8" srcpinname="Y Output Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="495" top="2730" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="495" top="2730" width="765" height="1080">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>
