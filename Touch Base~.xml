@@ -193,15 +193,15 @@
    <LINK dstnodeid="15" dstpinname="Layers" hiddenwhenlocked="1" srcnodeid="24" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="25" nodename="Kalle (VVVV)" systemname="Kalle (VVVV)">
-   <BOUNDS height="100" left="7350" top="405" type="Node" width="100">
+   <BOUNDS height="100" left="10380" top="525" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Background Kalle" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="26" nodename="IOBox (Color)" systemname="IOBox (Color)">
-   <BOUNDS height="0" left="6540" top="330" type="Node" width="0">
+   <BOUNDS height="0" left="9570" top="450" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="465" left="6540" top="330" type="Box" width="2280">
+   <BOUNDS height="465" left="9570" top="450" type="Box" width="2280">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.43465,0.77983,1.00000|">
    </PIN>

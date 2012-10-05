@@ -137,7 +137,7 @@
    </BOUNDS>
    <BOUNDS height="1050" left="225" top="510" type="Box" width="3300">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Touch Base acts as a multitouch simulator for developing applications in as well as a Tuio receiver for deploying the application on touch screens.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Touch Base acts as a multitouch simulator for developing applications as well as a Tuio receiver for deploying the application on a touch screen.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
