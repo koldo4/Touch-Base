@@ -135,9 +135,9 @@
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="225" top="510" type="Node" width="1335">
    </BOUNDS>
-   <BOUNDS height="1050" left="225" top="510" type="Box" width="3300">
+   <BOUNDS height="1350" left="225" top="510" type="Box" width="3285">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Touch Base acts as a multitouch simulator for developing applications as well as a Tuio receiver for deploying the application on a touch screen.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Touch Base acts as a multitouch simulator for developing applications as well as a Tuio receiver for deploying the application on a touch screen.&cr;&lf;&cr;&lf;info@uberact.com|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>

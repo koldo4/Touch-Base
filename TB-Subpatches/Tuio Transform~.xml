@@ -141,13 +141,13 @@
    </BOUNDS>
    <BOUNDS height="240" left="4845" top="1095" type="Box" width="1500">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value">
    </PIN>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|XYi Touch Simulator|">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|iXY Touch Simulator|">
    </PIN>
    </NODE>
    <LINK dstnodeid="2" dstpinname="Input 2" linkstyle="Bezier" srcnodeid="10" srcpinname="Y Output Value">
