@@ -25,9 +25,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="3" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="270" left="1035" top="4035" type="Node" width="3675">
+   <BOUNDS height="270" left="1035" top="4260" type="Node" width="3675">
    </BOUNDS>
-   <BOUNDS height="0" left="1035" top="4035" type="Box" width="0">
+   <BOUNDS height="0" left="1035" top="4260" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="2340" top="6240" type="Window" width="0">
    </BOUNDS>
@@ -91,16 +91,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="0" dstpinname="XYZ" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="1" dstpinname="X UnTransformed" hiddenwhenlocked="0" srcnodeid="0" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="1" dstpinname="Y UnTransformed" hiddenwhenlocked="0" srcnodeid="0" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="3" dstpinname="Z" hiddenwhenlocked="0" srcnodeid="0" srcpinname="Z">
-   </LINK>
-   <LINK dstnodeid="3" dstpinname="X" hiddenwhenlocked="0" srcnodeid="1" srcpinname="X Transformed">
-   </LINK>
-   <LINK dstnodeid="3" dstpinname="Y" hiddenwhenlocked="0" srcnodeid="1" srcpinname="Y Transformed">
    </LINK>
    <LINK dstnodeid="2" dstpinname="Input 1" srcnodeid="4" srcpinname="XYZ">
    </LINK>
@@ -206,6 +196,36 @@
    <LINKPOINT x="1845" y="1523">
    </LINKPOINT>
    <LINKPOINT x="2535" y="1523">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="X Transformed" dstnodeid="3" dstpinname="Y" linkstyle="VHV">
+   <LINKPOINT x="1095" y="3975">
+   </LINKPOINT>
+   <LINKPOINT x="2850" y="4050">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y Transformed" dstnodeid="3" dstpinname="Z" linkstyle="VHV">
+   <LINKPOINT x="2880" y="3930">
+   </LINKPOINT>
+   <LINKPOINT x="4680" y="3930">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y" dstnodeid="1" dstpinname="X UnTransformed" linkstyle="VHV">
+   <LINKPOINT x="3450" y="3263">
+   </LINKPOINT>
+   <LINKPOINT x="2310" y="3263">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Z" dstnodeid="1" dstpinname="Y UnTransformed" linkstyle="VHV">
+   <LINKPOINT x="4695" y="3405">
+   </LINKPOINT>
+   <LINKPOINT x="3495" y="3405">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="X" dstnodeid="3" dstpinname="X" linkstyle="Bezier">
+   <LINKPOINT x="2220" y="3638">
+   </LINKPOINT>
+   <LINKPOINT x="1095" y="3638">
    </LINKPOINT>
    </LINK>
    </PATCH>
