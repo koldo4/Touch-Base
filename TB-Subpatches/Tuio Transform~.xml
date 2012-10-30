@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Users\Dazein\Desktop\Touch Base - T16x9v26\Subpatches\Tuio Transform.v4p" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Subpatches\Tuio Transform.v4p" systemname="Tuio Transform">
-   <BOUNDS height="7050" left="14610" top="1980" type="Window" width="9000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="S:\GIT\Touch-Base\TB-Subpatches\Tuio Transform.v4p" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Subpatches\Tuio Transform.v4p" systemname="Tuio Transform">
+   <BOUNDS height="7050" left="14085" top="5280" type="Window" width="9000">
    </BOUNDS>
    <NODE componentmode="Hidden" id="7" nodename="UDP (Network Server)" systemname="UDP (Network Server)">
    <BOUNDS height="100" left="1800" top="300" type="Node" width="100">
@@ -12,44 +12,18 @@
    <PIN pinname="Queue Mode" slicecount="1" values="Concatenate">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\TUIODecoder.dll" id="6" nodename="TUIODecoder (Network 1.0)" systemname="TUIODecoder (Network 1.0)">
-   <BOUNDS height="270" left="1785" top="1095" type="Node" width="2865">
-   </BOUNDS>
-   <PIN pinname="TUIO Packet String" visible="1">
-   </PIN>
-   <BOUNDS left="1785" top="1095" type="Box">
-   </BOUNDS>
-   <PIN pinname="Session ID" visible="1">
-   </PIN>
-   <PIN pinname="Position X" visible="1">
-   </PIN>
-   <PIN pinname="Position Y" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="6" dstpinname="TUIO Packet String" srcnodeid="7" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="4" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
    <BOUNDS height="100" left="2535" top="1710" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Z" visible="1">
+   <PIN pinname="Z" visible="1" slicecount="0" values="0">
    </PIN>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="0" values="0">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="0" values="0">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="4" dstpinname="Z" linkstyle="Bezier" srcnodeid="6" srcpinname="Session ID">
-   <LINKPOINT x="1845" y="1523">
-   </LINKPOINT>
-   <LINKPOINT x="3105" y="1523">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="4" dstpinname="X" srcnodeid="6" srcpinname="Position X">
-   </LINK>
-   <LINK dstnodeid="4" dstpinname="Y" srcnodeid="6" srcpinname="Position Y">
-   </LINK>
    <NODE componentmode="Hidden" id="3" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
    <BOUNDS height="270" left="1035" top="4035" type="Node" width="3675">
    </BOUNDS>
@@ -157,7 +131,7 @@
    </PIN>
    <PIN pinname="Y Input Value">
    </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="XYi">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="iXY">
    </PIN>
    </NODE>
    <LINK dstnodeid="9" dstpinname="Y Input Value" srcnodeid="3" srcpinname="XYZ">
@@ -199,5 +173,39 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="2" dstpinname="Switch" srcnodeid="11" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\TUIODecoder.dll" id="6" nodename="TUIODecoder (Network 1.0)" systemname="TUIODecoder (Network 1.0)">
+   <BOUNDS height="270" left="1785" top="1095" type="Node" width="2865">
+   </BOUNDS>
+   <PIN pinname="TUIO Packet String" visible="1">
+   </PIN>
+   <BOUNDS left="1785" top="1095" type="Box">
+   </BOUNDS>
+   <PIN pinname="Session ID" visible="1">
+   </PIN>
+   <PIN pinname="Position X" visible="1">
+   </PIN>
+   <PIN pinname="Position Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="TUIO Packet String" srcnodeid="7" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Position X" dstnodeid="4" dstpinname="Y" linkstyle="Bezier">
+   <LINKPOINT x="2445" y="1523">
+   </LINKPOINT>
+   <LINKPOINT x="2805" y="1523">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Position Y" dstnodeid="4" dstpinname="Z" linkstyle="Bezier">
+   <LINKPOINT x="2640" y="1523">
+   </LINKPOINT>
+   <LINKPOINT x="3090" y="1523">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Session ID" dstnodeid="4" dstpinname="X" linkstyle="Bezier">
+   <LINKPOINT x="1845" y="1523">
+   </LINKPOINT>
+   <LINKPOINT x="2535" y="1523">
+   </LINKPOINT>
    </LINK>
    </PATCH>

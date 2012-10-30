@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\Touch-Base\Touch Base.v4p" bgcolor="13070080" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Touch Base.v4p" systemname="Touch Base">
+   <PATCH nodename="S:\GIT\Touch-Base\Touch Base.v4p" bgcolor="13070080" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Touch Base.v4p" systemname="Touch Base">
    <BOUNDS height="12195" left="0" top="0" type="Window" width="9285">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
@@ -135,9 +135,9 @@
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="225" top="510" type="Node" width="1335">
    </BOUNDS>
-   <BOUNDS height="1050" left="225" top="510" type="Box" width="3300">
+   <BOUNDS height="1350" left="225" top="510" type="Box" width="3285">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Touch Base acts as a multitouch simulator for developing applications as well as a Tuio receiver for deploying the application on a touch screen.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Touch Base acts as a multitouch simulator for developing applications as well as a Tuio receiver for deploying the application on a touch screen.&cr;&lf;&cr;&lf;info@uberact.com|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -275,6 +275,8 @@
    </PIN>
    <PIN pinname="AspectRatio" visible="1">
    </PIN>
+   <PIN pinname="iXY" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="11" dstpinname="AspectRatio" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="2" srcpinname="Transform Out">
    <LINKPOINT x="1935" y="4770">
@@ -289,7 +291,7 @@
    </BOUNDS>
    <BOUNDS height="3600" left="1860" top="5505" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="7050" left="14610" top="1980" type="Window" width="9000">
+   <BOUNDS height="7050" left="14085" top="5280" type="Window" width="9000">
    </BOUNDS>
    <PIN pinname="XYi Touch Simulator" visible="1">
    </PIN>
@@ -299,6 +301,10 @@
    </PIN>
    <PIN pinname="Tester" visible="1">
    </PIN>
+   <PIN pinname="iXY" visible="1">
+   </PIN>
+   <PIN pinname="iXY Touch Simulator" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="16" dstpinname="AspectRatio" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="2" srcpinname="Transform Out">
    </LINK>
@@ -307,8 +313,6 @@
    </LINKPOINT>
    <LINKPOINT x="2530" y="4215">
    </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="11" dstpinname="XYi" hiddenwhenlocked="1" srcnodeid="16" srcpinname="XYi">
    </LINK>
    <NODE componentmode="Hidden" filename="TB-Subpatches\Shutdown.v4p" id="30" nodename="TB-Subpatches\Shutdown.v4p" systemname="Shutdown">
    <BOUNDS height="100" left="3945" top="5505" type="Node" width="100">
@@ -343,7 +347,7 @@
    </BOUNDS>
    <PIN pinname="AR" visible="1">
    </PIN>
-   <BOUNDS type="Window" height="4680" left="9270" top="7515" width="4140">
+   <BOUNDS type="Window" height="4680" left="10710" top="8220" width="4035">
    </BOUNDS>
    <PIN pinname="layer" visible="1">
    </PIN>
@@ -373,13 +377,9 @@
    </PIN>
    <PIN pinname="Layer" pintype="Output" visible="1">
    </PIN>
+   <PIN pinname="iXY Null" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="XYi Null" dstnodeid="16" dstpinname="XYi Touch Simulator" hiddenwhenlocked="1" linkstyle="VHV">
-   <LINKPOINT x="3210" y="5168">
-   </LINKPOINT>
-   <LINKPOINT x="3210" y="5168">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Layer" dstnodeid="24" dstpinname="Layer 2" hiddenwhenlocked="1" linkstyle="VHV">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="10" dstpinname="AspectRatio" hiddenwhenlocked="1" linkstyle="Bezier">
@@ -402,6 +402,14 @@
    <LINKPOINT x="4590" y="3735">
    </LINKPOINT>
    <LINKPOINT x="4245" y="3735">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="iXY" dstnodeid="11" dstpinname="iXY" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="iXY Null" dstnodeid="16" dstpinname="iXY Touch Simulator" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="2535" y="5160">
+   </LINKPOINT>
+   <LINKPOINT x="3195" y="5160">
    </LINKPOINT>
    </LINK>
    </PATCH>

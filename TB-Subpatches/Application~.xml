@@ -52,7 +52,7 @@
    <BOUNDS type="Window" left="5385" top="3375" width="3105" height="3780">
    </BOUNDS>
    </NODE>
-   <NODE systemname="App-0" filename="..\Application\NAME APP\App-0.v4p" nodename="..\Application\NAME APP\App-0.v4p" componentmode="InAWindow" id="11">
+   <NODE systemname="App-0" filename="..\Application\NAME APP\App-0.v4p" nodename="..\Application\NAME APP\App-0.v4p" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="660" top="2460" width="2010" height="270">
    </BOUNDS>
    <PIN pinname="XYi" visible="1">
