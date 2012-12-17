@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="S:\GIT\Touch-Base\TB-Subpatches\Application.v4p" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Subpatches\Application.v4p" systemname="Application">
+   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\Touch-Base\TB-Subpatches\Application.v4p" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Subpatches\Application.v4p" systemname="Application">
    <BOUNDS height="12195" left="0" top="0" type="Window" width="9015">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -63,13 +63,15 @@
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
+   <PIN pinname="iXY" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="11" dstpinname="XYi">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="11" dstpinname="AspectRatio">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Layer" dstnodeid="2" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="9" srcpinname="Reset" dstnodeid="11" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="11" dstpinname="iXY">
    </LINK>
    </PATCH>
