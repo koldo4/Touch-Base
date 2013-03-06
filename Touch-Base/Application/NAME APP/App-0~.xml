@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
    <PATCH nodename="C:\Users\Uberact\Documents\GitHub\Touch-Base\Application\NAME APP\App-0.v4p" filename="D:\Company&apos;s files\Falcon\Science Museum\Patches\PQ Labs - 16 x 9 - vvvv 25\FX\Space Game\Main.v4p" systemname="Main">
-   <BOUNDS height="10815" left="12390" top="2940" type="Window" width="9000">
+   <BOUNDS height="10815" left="15660" top="4785" type="Window" width="9000">
    </BOUNDS>
    <LINK dstnodeid="80" dstpinname="Box ID, Z" srcnodeid="75" srcpinname="Box ID, Z">
    </LINK>
@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="XYi">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="iXY">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -53,6 +53,8 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="2" dstpinname="Input Node">
    </LINK>
@@ -66,6 +68,36 @@
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Reset">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1260" top="2835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="5" dstpinname="XYZ">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4965" top="1815" width="2340" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4965" top="1815" width="2340" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;-- hold down &apos;Tab+R&apos; to reset|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
    </PATCH>
