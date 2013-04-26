@@ -1,9 +1,9 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Users\Dazein\Desktop\Uberact - Touch Base\Touch Base\Subpatches\Title.v4p" filename="C:\Users\Dazein\Desktop\Uberact - Touch Base\Contribution 1.0\Subpatches\Title.v4p" systemname="Title">
-   <BOUNDS height="10410" left="8565" top="1830" type="Window" width="9000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
+   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\Touch-Base\Touch Base\TB Subpatches\Title.v4p" filename="C:\Users\Dazein\Desktop\Uberact - Touch Base\Contribution 1.0\Subpatches\Title.v4p" systemname="Title">
+   <BOUNDS height="10410" left="13440" top="2310" type="Window" width="9000">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="8" nodename="Text (EX9)" systemname="Text (EX9)">
-   <BOUNDS height="100" left="1275" top="4035" type="Node" width="100">
+   <BOUNDS height="100" left="1335" top="3975" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Mesh" visible="1">
    </PIN>
@@ -23,7 +23,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="7" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
-   <BOUNDS height="100" left="1425" top="2070" type="Node" width="100">
+   <BOUNDS height="100" left="1461" top="2070" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -51,11 +51,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="5" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="0" left="1590" top="2475" type="Node" width="0">
+   <BOUNDS height="0" left="1560" top="2505" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="1590" top="2475" type="Box" width="795">
+   <BOUNDS height="240" left="1560" top="2505" type="Box" width="1725">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" values="|Touch Base 2012|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="|Touch Base|">
    </PIN>
    <PIN encoded="0" pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -67,9 +67,9 @@
    <LINK dstnodeid="6" dstpinname="Input 1" srcnodeid="5" srcpinname="Output String">
    </LINK>
    <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="0" left="1845" top="2775" type="Node" width="0">
+   <BOUNDS height="0" left="1761" top="2799" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="1845" top="2775" type="Box" width="795">
+   <BOUNDS height="240" left="1761" top="2799" type="Box" width="795">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" values="|by gaz|">
    </PIN>
@@ -83,9 +83,9 @@
    <LINK dstnodeid="6" dstpinname="Input 2" srcnodeid="4" srcpinname="Output String">
    </LINK>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="0" left="2085" top="3075" type="Node" width="0">
+   <BOUNDS height="0" left="1941" top="3087" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="2085" top="3075" type="Box" width="885">
+   <BOUNDS height="240" left="1941" top="3087" type="Box" width="885">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" values="Uberact">
    </PIN>
@@ -101,13 +101,13 @@
    <LINK dstnodeid="8" dstpinname="Text" srcnodeid="6" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="1965" top="1170" type="Node" width="100">
+   <BOUNDS height="100" left="1845" top="1182" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="720" left="1965" top="1170" type="Box" width="795">
+   <BOUNDS height="720" left="1845" top="1182" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="3" values="0.59,0.33,0.49">
+   <PIN pinname="Y Input Value" slicecount="3" values="0.45,0.25,0.38">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
@@ -131,9 +131,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="1740" top="285" type="Node" width="0">
+   <BOUNDS height="0" left="1716" top="453" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="720" left="1740" top="285" type="Box" width="795">
+   <BOUNDS height="720" left="1716" top="453" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" values="0.43,-0.1,-0.57">
    </PIN>
@@ -151,9 +151,9 @@
    <LINK dstnodeid="7" dstpinname="TranslateY" srcnodeid="0" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="10" nodename="IOBox (Color)" systemname="IOBox (Color)">
-   <BOUNDS height="0" left="1890" top="4395" type="Node" width="0">
+   <BOUNDS height="0" left="2034" top="4647" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="480" left="1890" top="4395" type="Box" width="2250">
+   <BOUNDS height="480" left="2034" top="4647" type="Box" width="2250">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
@@ -163,9 +163,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="11" nodename="IOBox (Node)" systemname="IOBox (Node)">
-   <BOUNDS height="0" left="1275" top="5835" type="Node" width="0">
+   <BOUNDS height="0" left="1335" top="5595" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="1275" top="5835" type="Box" width="795">
+   <BOUNDS height="240" left="1335" top="5595" type="Box" width="795">
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
