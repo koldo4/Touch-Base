@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Users\Dazein\Desktop\Uberact - Touch Base\Trunk\Subpatches\Reset.v4p" filename="D:\Company&apos;s files\Falcon\Science Museum\Patches\PQ Labs - 16 x 9 - vvvv 25\Subpatches\Reset.v4p" systemname="Reset">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta30.dtd" >
+   <PATCH nodename="D:\GitHub\Touch-Base\Touch Base\Subpatches\Reset.v4p" filename="D:\Company&apos;s files\Falcon\Science Museum\Patches\PQ Labs - 16 x 9 - vvvv 25\Subpatches\Reset.v4p" systemname="Reset">
    <BOUNDS height="3510" left="5385" top="3375" type="Window" width="3375">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="3" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
+   <NODE componentmode="Hidden" id="3" nodename="Keyboard (System Global)" systemname="Keyboard (System Global Legacy)">
    <BOUNDS height="100" left="435" top="375" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="0" left="435" top="375" type="Box" width="0">
@@ -12,14 +12,14 @@
    <PIN pinname="Keyboard Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="2" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
+   <NODE componentmode="Hidden" id="2" nodename="KeyMatch (String)" systemname="Match (String)">
    <BOUNDS height="100" left="435" top="765" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="0" left="555" top="765" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="11040" top="2385" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Key Match" slicecount="1" values="&lt;TAB&gt;R" encoded="0">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="&lt;TAB&gt;R">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -71,7 +71,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Reset" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Reset">
    </PIN>
    </NODE>
    <LINK dstnodeid="4" dstpinname="Y Input Value" srcnodeid="0" srcpinname="Up Edge">
@@ -81,7 +81,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1350" top="375" width="1710" height="510">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Holding down &quot;Tab+R&quot; sends a reset|" encoded="0">
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|Holding down &quot;Tab+R&quot; sends a reset|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -90,4 +90,30 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="S (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="S (Value Advanced)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1455" top="2235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1455" top="2235">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Up Edge" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1695" top="1755" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1695" top="1755" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="send">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="6" dstpinname="Send String">
+   </LINK>
    </PATCH>
