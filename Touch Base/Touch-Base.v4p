@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
-   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\Touch-Base\Touch Base\Touch-Base.v4p" bgcolor="16757760" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Touch Base.v4p" systemname="Touch Base">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta30.2.dtd" >
+   <PATCH nodename="D:\GitHub\Touch-Base\Touch Base\Touch-Base.v4p" bgcolor="16757760" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Touch Base.v4p" systemname="Touch Base">
    <BOUNDS height="12345" left="0" top="0" type="Window" width="11865">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
@@ -298,12 +298,6 @@
    <LINKPOINT x="1560" y="3258">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="24" dstpinname="Layer 2" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="10" srcpinname="Layer">
-   <LINKPOINT x="2400" y="5358">
-   </LINKPOINT>
-   <LINKPOINT x="972" y="5358">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="Hidden" filename="TB Subpatches\Application.v4p" id="11" nodename="TB Subpatches\Application.v4p" systemname="Application">
    <BOUNDS height="270" left="684" top="5172" type="Node" width="3120">
    </BOUNDS>
@@ -328,32 +322,6 @@
    </LINK>
    <LINK dstnodeid="24" dstpinname="Layer 1" hiddenwhenlocked="1" srcnodeid="11" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="TB Subpatches\Tuio Transform.v4p" id="16" nodename="TB Subpatches\Tuio Transform.v4p" systemname="Tuio Transform">
-   <BOUNDS height="100" left="1104" top="2604" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="3600" left="1104" top="2604" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="8925" left="13155" top="2865" type="Window" width="9000">
-   </BOUNDS>
-   <PIN pinname="XYi Touch Simulator" visible="1">
-   </PIN>
-   <PIN pinname="AspectRatio" visible="1">
-   </PIN>
-   <PIN pinname="XYi" visible="1">
-   </PIN>
-   <PIN pinname="Tester" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="iXY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="16" dstpinname="AspectRatio" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="2" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="16" dstpinname="iXY Touch Simulator" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="10" srcpinname="iXY Null">
-   <LINKPOINT x="1362" y="3943">
-   </LINKPOINT>
-   <LINKPOINT x="1698" y="3099">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="Hidden" filename="TB Subpatches\Title.v4p" id="55" nodename="TB Subpatches\Title.v4p" systemname="Title">
    <BOUNDS height="100" left="5430" top="5604" type="Node" width="100">
    </BOUNDS>
@@ -375,8 +343,6 @@
    <LINK dstnodeid="56" dstpinname="Background Color" srcnodeid="55" srcpinname="Background Color">
    </LINK>
    <LINK dstnodeid="56" dstpinname="Projection" srcnodeid="55" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="iXY" dstnodeid="10" dstpinname="Touch iXY" linkstyle="PolyLine" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Touch iXY" dstnodeid="11" dstpinname="iXY" hiddenwhenlocked="1">
    </LINK>
@@ -411,5 +377,43 @@
    </LINKPOINT>
    <LINKPOINT x="2448" y="2826">
    </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" filename="TB Subpatches\TuioTransform.v4p" id="16" nodename="TB Subpatches\TuioTransform.v4p" systemname="TuioTransform">
+   <BOUNDS height="100" left="1110" top="2610" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="1110" top="2610" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="8925" left="13155" top="2865" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="XYi Touch Simulator" visible="1">
+   </PIN>
+   <PIN pinname="AspectRatio" visible="1">
+   </PIN>
+   <PIN pinname="XYi" visible="1">
+   </PIN>
+   <PIN pinname="Tester" visible="1">
+   </PIN>
+   <PIN pinname="iXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="AspectRatio" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="2" srcpinname="Transform Out">
+   </LINK>
+   <NODE systemname="MouseToTouch" filename="TB Subpatches\MouseToTouch.v4p" nodename="TB Subpatches\MouseToTouch.v4p" componentmode="InAWindow" id="61">
+   <BOUNDS type="Node" left="2460" top="2610" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2460" top="2610">
+   </BOUNDS>
+   <PIN pinname="AspectRatio Transform" visible="1">
+   </PIN>
+   <PIN pinname="iXY" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="61" dstpinname="AspectRatio Transform">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="iXY" dstnodeid="10" dstpinname="Touch iXY">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Layer" dstnodeid="24" dstpinname="Layer 2">
    </LINK>
    </PATCH>
